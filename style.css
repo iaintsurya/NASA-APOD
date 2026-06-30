@@ -1,0 +1,131 @@
+/* Custom Design System variables */
+:root {
+  --bg-color: #050508;          /* Midnight Obsidian */
+  --card-bg: #0b0c10;           /* Sleek Graphite Slate */
+  --text-main: #f3f4f6;         /* Clean Polar White */
+  --text-muted: #62697a;        /* Muted Nebula Grey */
+  --glow-accent: #00f0ff;       /* Pure Cyber Cyan Neon */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.cosmos-app {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Centered Header Overhaul */
+.hero-section {
+  margin-bottom: 3.5rem;
+}
+
+.glitch-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.6rem;
+  color: #ffffff;
+  text-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+}
+
+.epic-subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.8rem;
+}
+
+/* Minimalist App Container */
+#app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05rem;
+}
+
+/* Premium Frameless Image with Neon Accent Glow */
+.space-image-frame {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 
+              0 0 40px rgba(0, 240, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  line-height: 0;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.space-image-frame img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(15%) contrast(105%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+/* Subtle Interactive Hover State */
+.space-image-frame:hover {
+  border-color: rgba(0, 240, 255, 0.3);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 
+              0 0 50px rgba(0, 240, 255, 0.15);
+}
+
+.space-image-frame:hover img {
+  transform: scale(1.015);
+  filter: grayscale(0%) contrast(100%);
+}
+
+/* Minimalist Paragraph */
+#app p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #a0aec0;
+  max-width: 600px;
+  margin-top: 2.5rem;
+  text-align: justify;
+  font-weight: 300;
+  letter-spacing: 0.01rem;
+}
+
+/* Pulse Loading Line */
+.loading-pulse {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2rem;
+  color: var(--glow-accent);
+  animation: neonPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes neonPulse {
+  0%, 100% { opacity: 0.3; text-shadow: 0 0 10px rgba(0, 240, 255, 0); }
+  50% { opacity: 1; text-shadow: 0 0 15px rgba(0, 240, 255, 0.6); }
+}
